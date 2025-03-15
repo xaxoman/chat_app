@@ -5,12 +5,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Local Network Chat App</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <div class="container">
+        <div class="chat-container">
+            <h1>Local Network Chat</h1>
+            <div class="chat-box" id="messages"></div>
+            <form id="chat-form">
+                <input id="message-input" autocomplete="off" placeholder="Type your message..." required />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 
-
-     <script src="../index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
 </body>
 </html>
