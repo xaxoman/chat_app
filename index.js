@@ -11,14 +11,14 @@ app.use(express.static('public'));
 
 // Gestisce le connessioni socket
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('Un utente si è connesso');
     
     // Gestisce l'entrata di un utente con username
     socket.on('join', (username) => {
         socket.username = username;  // Memorizza l'username nel socket
         io.emit('message', {  // Invia un messaggio a tutti
             user: 'System',
-            text: `${username} has joined the chat!`,
+            text: `${username} si è unito alla chat.`,
             time: new Date().toLocaleTimeString()
         });
     });
@@ -34,11 +34,11 @@ io.on('connection', (socket) => {
 
     // Gestisce la disconnessione
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        console.log('Un utente si è disconnesso');
         if (socket.username) {
             io.emit('message', {  // Notifica tutti dell'uscita
                 user: 'System',
-                text: `${socket.username} has left the chat.`,
+                text: `${socket.username} ha lasciato la chat.`,
                 time: new Date().toLocaleTimeString()
             });
         }
