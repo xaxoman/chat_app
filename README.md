@@ -2,6 +2,9 @@
 
 Un'applicazione di chat in tempo reale che consente agli utenti sulla stessa rete locale (WiFi) di scambiare messaggi.
 
+## 🎥 Demo Video
+[![Watch the video](https://img.youtube.com/vi/EjfSxQ717vY/maxresdefault.jpg)](https://www.youtube.com/shorts/EjfSxQ717vY)
+
 ## 📌 Concetti Utilizzati
 
 - **Express**: Framework per applicazioni web Node.js
